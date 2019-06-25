@@ -42,4 +42,3 @@ export class NumberPad extends Component {
 }
 
 export default NumberPad;
-//AppRegistry.registerComponent("AwesomeProject", () => NumberPad);

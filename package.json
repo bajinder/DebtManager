@@ -3,17 +3,24 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "start": "expo start",
+    "test": "jest",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
     "apollo-server-express": "^2.6.4",
     "body-parser": "^1.19.0",
+    "expo": "^33.0.7",
+    "expo-font": "^5.0.1",
     "express": "^4.17.1",
     "graphql": "^14.3.1",
     "graphql-tools": "^4.0.5",
     "react": "16.8.3",
     "react-native": "^0.59.9",
+    "react-native-animatable": "^1.3.2",
     "react-native-maps": "^0.24.2",
     "yarn": "^1.15.2",
     "zlib": "^1.0.5"
@@ -33,5 +40,9 @@
     "assets": [
       "./assets/fonts/Josefin_Sans/"
     ]
+  },
+  "main": "node_modules/expo/AppEntry.js",
+  "bs": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
   }
 }

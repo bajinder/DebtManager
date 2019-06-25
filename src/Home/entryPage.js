@@ -37,11 +37,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ff4f4f"
   },
-  income: { color: "green", fontSize: 40, fontFamily: "JosefinSans-Light" },
-  expense: { color: "green", fontSize: 40, fontFamily: "JosefinSans-Light" },
+  income: {
+    color: "green",
+    fontSize: 40
+    // fontFamily: "JosefinSans-Light"
+  },
+  expense: {
+    color: "green",
+    fontSize: 40
+    // fontFamily: "JosefinSans-Light"
+  },
   button: { padding: 15, width: 100, borderRadius: 50, justifyContent: "center", alignItems: "center" },
-  cancelButton: { backgroundColor: "#ff4f4f", fontFamily: "JosefinSans-Light" },
-  okButton: { backgroundColor: "green", fontFamily: "JosefinSans-Light" },
+  cancelButton: {
+    backgroundColor: "#ff4f4f"
+    // fontFamily: "JosefinSans-Light"
+  },
+  okButton: {
+    backgroundColor: "green"
+    // fontFamily: "JosefinSans-Light"
+  },
   buttonContainer: { flex: 1, backgroundColor: "skyblue", flexDirection: "row", justifyContent: "space-evenly", paddingTop: 20 }
 });
 

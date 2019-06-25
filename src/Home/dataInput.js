@@ -36,8 +36,14 @@ export class DataInput extends Component {
 }
 
 const styles = StyleSheet.create({
-  income: { color: "green", fontFamily: "JosefinSans-Light" },
-  expense: { color: "green", fontFamily: "JosefinSans-Light" }
+  income: {
+    color: "green"
+    // fontFamily: "JosefinSans-Light"
+  },
+  expense: {
+    color: "green"
+    // fontFamily: "JosefinSans-Light"
+  }
 });
 
 export default DataInput;

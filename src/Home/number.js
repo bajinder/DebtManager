@@ -3,9 +3,8 @@ import { View, Text, Button, TouchableOpacity, StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
   numpadChar: {
-    fontSize: 35,
-
-    fontFamily: "JosefinSans-Light"
+    fontSize: 35
+    // fontFamily: "JosefinSans-Light"
   }
 });
 export default class Number extends Component {
@@ -19,5 +18,3 @@ export default class Number extends Component {
     );
   }
 }
-
-//AppRegistry.registerComponent("AwesomeProject", () => Number);
