@@ -1,6 +1,7 @@
 import React, { Component, Props } from "react";
-import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
 import { NumberPad } from "./numberPad";
+import * as Animatable from "react-native-animatable";
 
 export class DataInput extends Component {
   constructor() {
@@ -8,28 +9,37 @@ export class DataInput extends Component {
     this.state = {
       isIncome: true,
       total: "",
-      buttonPressedIn: false
+      buttonPressedIn: false,
+      fontSize: 30
     };
   }
   getInput() {
     if (this.state.total === "") {
-      if (this.state.isIncome) return <Text style={[styles.income, { fontSize: this.state.buttonPressedIn === true ? 10 : 40 }]}>Income</Text>;
+      if (this.state.isIncome) return <Text style={styles.income}>Income</Text>;
       else return <Text style={styles.expense}>Expense</Text>;
     }
     if (this.state.isIncome) return <Text style={styles.income}>{this.state.total}</Text>;
     return <Text style={styles.expense}>{this.state.total}</Text>;
   }
   handleButtonPressIn() {
-    let pressedIn = this.state.buttonPressedIn;
-    pressedIn = true;
-    // this.setState({ buttonPressedIn: pressedIn });
+    this.setState({ fontSize: 10 });
+  }
+  handleButtonPressOut() {
+    this.setState({ fontSize: 40 });
   }
   render() {
     return (
       <View>
-        <TouchableHighlight onPressIn={this.handleButtonPressIn()}>
+        {/* <TouchableHighlight onPressIn={this.handleButtonPressIn()}>
           <Text style={{ color: "red" }}>{this.getInput()}</Text>
-        </TouchableHighlight>
+
+          <Animatable.Text animation="zoomInUp">Zoom me up, Scotty</Animatable.Text>
+        </TouchableHighlight> */}
+        <TouchableOpacity onPressIn={() => this.setState({ fontSize: 15 })} onPressOut={() => this.setState({ fontSize: 30 })}>
+          <Animatable.Text transition="fontSize" style={{ fontSize: this.state.fontSize }}>
+            {this.getInput()}
+          </Animatable.Text>
+        </TouchableOpacity>
       </View>
     );
   }
