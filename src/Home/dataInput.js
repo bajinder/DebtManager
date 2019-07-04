@@ -30,7 +30,7 @@ export class DataInput extends Component {
       </TouchableOpacity>
     );
   }
-  getUserInputOnly() {
+  getUserInputPanel() {
     return (
       <View>
         <Text style={{ fontSize: this.state.fontSize, color: "white" }}>{this.props.data.total}</Text>
@@ -42,7 +42,7 @@ export class DataInput extends Component {
       if (this.props.data.isIncome) return this.getTouchableOpacityButton("Income");
       else return this.getTouchableOpacityButton("Expense");
     }
-    return this.getUserInputOnly();
+    return this.getUserInputPanel();
   }
 }
 

@@ -4,7 +4,7 @@ import { View, Text, Button, TouchableOpacity, StyleSheet } from "react-native";
 const style = StyleSheet.create({
   numpadChar: {
     fontSize: 35,
-    fontWeight: "100"
+    fontWeight: "200"
     // fontFamily: "JosefinSans-Light"
   }
 });
